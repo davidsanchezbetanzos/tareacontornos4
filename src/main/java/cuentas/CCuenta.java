@@ -1,17 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
+
+/**EJEMPLO DE COMENTARIO JAVA DOC*/
 package cuentas;
 
 /**
  *
- * @author David Sánchez Gómez
+ * @author David Sánchez Gómez 
  */
 public class CCuenta {
 
     /**
-     * @return the nombre
+     * @return the nombre (tambien sería comentario javadoc)
      */
     public String getNombre() {
         return nombre;
@@ -67,35 +66,36 @@ public class CCuenta {
     }
     
 
-
+    /**parametros*/
     private String nombre;
     private String cuenta;
     private double saldo;
     private double tipoInterés;
-
+    
+    /** constructor*/
     public CCuenta()
     {
     }
-
+    /** otro constructor*/
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
         cuenta=cue;
         saldo=sal;
     }
-
+/**getter*/
     public double estado()
     {
         return getSaldo();
     }
-
+/** metodo ingresar*/
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
             throw new Exception("No se puede ingresar una cantidad negativa");
         setSaldo(getSaldo() + cantidad);
     }
-
+/** metrodo retirar*/
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
